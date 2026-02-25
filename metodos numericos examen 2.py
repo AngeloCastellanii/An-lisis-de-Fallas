@@ -53,7 +53,7 @@ tiempo_calculado = -math.log(18/49) / 0.077
 
 print(f"Tiempo calculado (t): {tiempo_calculado:.4f}")
 print(f"Error APROXIMADO en Iteracion 2 (%): {error_aprox_it2:.4f}")
-print("Ventaja vs Biseccion: Usa interpolacion lineal y suele converger mas rapido")
+print("Ventaja vs Biseccion: Aprovecha magnitud de f(x)")
 print("Desventaja principal: Estancamiento unilateral")
 
 
@@ -130,9 +130,5 @@ for _ in range(max_iter_secante):
 
 print(f"Resistencia (R): {xb:.4f}")
 print(f"Siguiente x (si x0=1, x1=1.5): {x2:.4f}")
-print(f"Criterio de convergencia: error aproximado relativo < {tol_secante:.2f}%")
-print(f"Error aproximado final (%): {error_secante:.4f}")
-print(f"Iteraciones secante: {iter_secante}")
-print(f"Motivo de paro: {motivo_paro}")
 print("Diferencia con Newton: No usa derivadas analiticas")
-print("Riesgo numerico: Denominador cercano a cero")
+print("Riesgo numerico: Division por cero si f(xi) = f(xi-1)")
